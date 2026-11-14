@@ -1,0 +1,53 @@
+public class Solution {
+    public string GcdOfStrings(string str1, string str2) 
+    {
+
+        string shortString = "";
+        string longString = "";
+
+        if (str1.Length >= str2.Length)
+        {
+            shortString = str2;
+            longString = str1;
+        }
+        else
+        {
+            shortString = str1;
+            longString = str2;
+        }
+
+        int candidate = shortString.Length;
+
+        for (int i = 0; i < shortString.Length; i++)
+        {
+            System.Text.StringBuilder x = new System.Text.StringBuilder("");
+            System.Text.StringBuilder result1 = new System.Text.StringBuilder("");
+            System.Text.StringBuilder result2 = new System.Text.StringBuilder("");
+            int div1 = 0;
+            int div2 = 0;
+            
+            if (shortString.Length % candidate == 0 && longString.Length % candidate == 0)
+            {
+            x.Append(shortString[..candidate]); 
+            div1 = shortString.Length / x.Length;
+            div2 = longString.Length / x.Length;
+            result1.Insert(0, x.ToString(), div1);
+            result2.Insert(0, x.ToString(), div2);
+
+            if (result1.ToString() == shortString && result2.ToString() == longString)
+            {
+                return x.ToString();
+            }
+
+            } 
+            candidate--;  
+            continue;
+
+            
+
+
+        }
+        return "";
+    
+    }
+}
