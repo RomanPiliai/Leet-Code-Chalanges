@@ -1,4 +1,9 @@
-public class Solution {
+using System.Text;
+
+namespace MergeStringsAlternately
+{
+public class Solution 
+{
     public string MergeAlternately(string word1, string word2) 
     {
         var result = new StringBuilder();
@@ -44,4 +49,5 @@ public class Solution {
         return result.ToString();
         
     }
+}
 }

@@ -1,3 +1,4 @@
+namespace GreatestCommonDivisorStrings{
 public class Solution {
     public string GcdOfStrings(string str1, string str2) 
     {
@@ -50,4 +51,5 @@ public class Solution {
         return "";
     
     }
+}
 }

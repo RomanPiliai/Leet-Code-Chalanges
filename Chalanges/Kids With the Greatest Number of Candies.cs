@@ -1,4 +1,6 @@
 using System.Linq;
+namespace KidsCandies
+{
 public class Solution {
     public IList<bool> KidsWithCandies(int[] candies, int extraCandies) 
     {
@@ -17,4 +19,5 @@ public class Solution {
         }
         return result.ToArray();    
     }
+}
 }
